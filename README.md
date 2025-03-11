@@ -172,8 +172,8 @@ Import GitHub Repository
 Deploy & Get Live URL! 🎉
 📜 Author
 Hasan Talukder
-🌎 GitHub: MHS676
-🔗 LinkedIn: Hasan Talukder
+🌎 GitHub: [MHS676](https://github.com/MHS676)
+🔗 LinkedIn: [Hasan Talukder](https://www.linkedin.com/in/hasan-talukder100/)
 
 # Stock Market Dashboard - FastAPI & React
 
