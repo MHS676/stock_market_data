@@ -174,3 +174,19 @@ Deploy & Get Live URL! 🎉
 Hasan Talukder
 🌎 GitHub: MHS676
 🔗 LinkedIn: Hasan Talukder
+
+# Stock Market Dashboard - FastAPI & React
+
+##  What I Learned
+- Building a full-stack application using FastAPI & React
+- Implementing pagination and search filters
+- Creating interactive multi-axis charts with Recharts
+- Deploying backend on Render and frontend on Vercel
+- Managing PostgreSQL with SQLAlchemy and Alembic
+- Using environment variables for secure database access
+
+##  Challenges Faced
+- Handling CORS issues between backend & frontend
+- Fixing database migration errors in Alembic
+- Formatting data correctly for visualization
+- Deploying on cloud services with free-tier limitations
