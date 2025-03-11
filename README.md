@@ -157,7 +157,7 @@ bash
 Copy
 Edit
 pip install -r requirements.txt
-Set Environment Variables (postgresql://trade_db_apiz_user:THvjJ1nV9FTyMXzR1rQRBliwVZDI6KvR@dpg-cv7hqtl6l47c73fie9bg-a.oregon-postgres.render.com/trade_db_apiz)
+
 Start Command
 bash
 Copy
