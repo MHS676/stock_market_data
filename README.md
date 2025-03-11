@@ -1,0 +1,192 @@
+This README file includes a complete guide on Stock Market API built with FastAPI, PostgreSQL, and ReactJS for visualization.
+
+Stock Market Dashboard (Full-Stack App)
+This project is a full-stack web application that allows users to view, search, filter, and analyze stock market data. It is built with:
+
+Backend: FastAPI + PostgreSQL
+Frontend: ReactJS + Recharts
+Deployment: Render.com
+Features
+Backend (FastAPI & PostgreSQL)
+CRUD Operations (Create, Read, Update, Delete)
+✅ Pagination & Search (Filter by Trade Code)
+✅ CORS Middleware for Frontend Requests
+✅ Database Migrations with Alembic
+✅ Secure Environment Variables with .env
+✅ Deployed on Render.com
+
+Frontend (ReactJS & Recharts)
+✅ Interactive Multi-Axis Chart (Close Price & Volume)
+✅ Trade Code Dropdown Filter
+✅ Paginated Table with Search Functionality
+✅ Responsive Design with TailwindCSS
+✅ Hosted on Vercel
+
+🚀 Tech Stack
+Backend
+FastAPI - High-performance Python web framework
+PostgreSQL - Relational database for storing stock data
+SQLAlchemy - ORM for database interactions
+Alembic - Database migration management
+Pydantic - Data validation
+Uvicorn - ASGI server
+Frontend
+ReactJS - Frontend framework
+Recharts - Data visualization
+Axios - API requests
+TailwindCSS - Styling
+📂 Project Structure
+plaintext
+Copy
+Edit
+📦 stock-market-dashboard
+ ┣ 📂 backend
+ ┃ ┣ 📜 main.py              # FastAPI Application Entry
+ ┃ ┣ 📜 database.py          # Database Configuration
+ ┃ ┣ 📜 models.py            # Database Models
+ ┃ ┣ 📜 schemas.py           # Pydantic Schemas
+ ┃ ┣ 📜 routes.py            # API Routes
+ ┃ ┣ 📜 requirements.txt     # Backend Dependencies
+ ┃ ┗ 📜 .env                 # Environment Variables
+ ┣ 📂 frontend
+ ┃ ┣ 📜 src/
+ ┃ ┃ ┣ 📜 App.jsx            # Main Frontend Component
+ ┃ ┃ ┣ 📜 api.js             # API Service for Fetching Data
+ ┃ ┃ ┣ 📜 Dashboard.jsx      # Multi-Axis Chart & Table
+ ┃ ┃ ┣ 📜 Table.jsx          # Paginated Table with Search
+ ┃ ┃ ┣ 📜 styles.css         # Tailwind Styling
+ ┃ ┣ 📜 package.json         # Frontend Dependencies
+ ┃ ┗ 📜 .env                 # Environment Variables (Frontend)
+ ┣ 📜 README.md              # Project Documentation
+ ┣ 📜 .gitignore             # Ignore Files for Git
+ ┗ 📜 .env                   # Root Environment Variables
+⚙ Backend Setup (FastAPI & PostgreSQL)
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/MHS676/stock-market-dashboard.git
+cd stock-market-dashboard/backend
+2️⃣ Create a Virtual Environment
+For Mac/Linux:
+
+bash
+Copy
+Edit
+python3 -m venv venv
+source venv/bin/activate
+For Windows:
+
+bash
+Copy
+Edit
+python -m venv venv
+venv\Scripts\activate
+3️⃣ Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4️⃣ Set Up PostgreSQL Database
+Use PostgreSQL locally or Render.com
+Create a .env file in the backend directory
+plaintext
+Copy
+Edit
+DATABASE_URL=postgresql://your_user:your_password@your_host/your_database
+5️⃣ Apply Database Migrations
+bash
+Copy
+Edit
+alembic upgrade head
+6️⃣ Run the FastAPI Server
+bash
+Copy
+Edit
+uvicorn main:app --reload
+Server will start at: http://127.0.0.1:8000
+
+Test API in Swagger
+Open http://127.0.0.1:8000/docs to test the API.
+
+📌 Backend API Endpoints
+HTTP Method	Endpoint	Description
+POST	/trade/	Create a new trade
+GET	/trade/	Get trades (paginated & filterable by trade code)
+GET	/trade/{trade_id}	Get a trade by ID
+PUT	/trade/{trade_id}	Update a trade
+DELETE	/trade/{trade_id}	Delete a trade
+🖥 Frontend Setup (ReactJS)
+1️⃣ Move to Frontend Directory
+bash
+Copy
+Edit
+cd ../frontend
+2️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+3️⃣ Create .env File for Frontend
+plaintext
+Copy
+Edit
+
+
+npm run dev
+Frontend will run at http://localhost:5173
+
+📌 Frontend Features
+1️⃣ Multi-Axis Chart
+📈 Line Chart: Close Price
+📊 Bar Chart: Volume
+🎛 Dropdown Filter: Trade Code
+
+2️⃣ Paginated Table with Search
+🔎 Search by Trade Code
+📄 Paginate through stock data
+🎨 Styled with TailwindCSS
+
+🚀 Deployment
+📌 Backend Deployment (Render)
+Push Code to GitHub
+Go to Render → Create a New Web Service
+Select Your GitHub Repo
+Build Command
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Set Environment Variables (postgresql://trade_db_apiz_user:THvjJ1nV9FTyMXzR1rQRBliwVZDI6KvR@dpg-cv7hqtl6l47c73fie9bg-a.oregon-postgres.render.com/trade_db_apiz)
+Start Command
+bash
+Copy
+Edit
+uvicorn main:app --host 0.0.0.0 --port $PORT
+Deploy & Get Live URL! 🎉
+📌 Frontend Deployment (https://stock-market-data.vercel.app/)
+Push Code to GitHub
+Go to Vercel
+Import GitHub Repository
+
+Deploy & Get Live URL! 🎉
+📜 Author
+Hasan Talukder
+🌎 GitHub: MHS676
+🔗 LinkedIn: Hasan Talukder
+
+# Stock Market Dashboard - FastAPI & React
+
+##  What I Learned
+- Building a full-stack application using FastAPI & React
+- Implementing pagination and search filters
+- Creating interactive multi-axis charts with Recharts
+- Deploying backend on Render and frontend on Vercel
+- Managing PostgreSQL with SQLAlchemy and Alembic
+- Using environment variables for secure database access
+
+##  Challenges Faced
+- Handling CORS issues between backend & frontend
+- Fixing database migration errors in Alembic
+- Formatting data correctly for visualization
+- Deploying on cloud services with free-tier limitations
