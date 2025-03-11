@@ -45,7 +45,7 @@ const App = () => {
     <div className="p-6">
       <h1 className="text-4xl text-center my-4">Stock Market Dashboard</h1>
 
-      {/* Search and Filter */}
+
       <div className="flex justify-between mb-4">
         <input
           type="text"
@@ -68,7 +68,7 @@ const App = () => {
         </div>
       </div>
 
-      {/* Multi-axis Chart */}
+
       <ResponsiveContainer width="100%" height={400}>
         <ComposedChart data={filteredData}>
           <CartesianGrid strokeDasharray="3 3" />
@@ -82,7 +82,7 @@ const App = () => {
         </ComposedChart>
       </ResponsiveContainer>
 
-      {/* Table */}
+
       <div className="overflow-x-auto mt-6 border rounded p-4">
         <table className="table-auto w-full border-collapse border border-gray-300">
           <thead>
